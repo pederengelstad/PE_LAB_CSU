@@ -12,14 +12,7 @@ for (arg in Args){
   argSplit <- strsplit(arg, "=")
   argSplit[[1]][1]
   argSplit[[1]][2]
-  if(argSplit[[1]][1]=="ws") modelWorkspace <- argSplit[[1]][2]
-  if(argSplit[[1]][1]=="mpt")  make.p.tif <- as.logical(argSplit[[1]][2])
-  if(argSplit[[1]][1]=="mbt")  make.binary.tif <- as.logical(argSplit[[1]][2])
-  if(argSplit[[1]][1]=="mod")  MOD <- as.logical(argSplit[[1]][2])
-  if(argSplit[[1]][1]=="multicore")  multCore <- as.logical(argSplit[[1]][2])
-  if(argSplit[[1]][1]=="parRasterFile")  parRasterFile <- argSplit[[1]][2]
-  if(argSplit[[1]][1]=="applymodel")  ApplyModel <- argSplit[[1]][2]
-}
+  if(
 
 ScriptPath<-dirname(dirname(ScriptPath))
 source(file.path(ScriptPath,"LoadRequiredCode.r"))
